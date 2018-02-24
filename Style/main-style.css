@@ -1,0 +1,106 @@
+.body {
+    background-image: url(Images/booklibrary-background-1.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+    opacity: 0.9;
+    display: grid;
+    grid-template-rows: 5% 15% 5% 70% 5%;
+/*    height: 100vh;*/
+    font-family: 'Grand Hotel', cursive;
+}
+
+.header {
+    grid-row-start: 2;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.header div {
+    width: 50%;
+}
+
+.header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.section {
+    grid-row-start: 4;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+    border-radius: 25px;
+}
+.image-portada {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/*CSS TO FLIP */
+
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 1000px;
+    border: 1px solid red;
+    height: 400px;
+    width: 25%;
+    margin: 1%
+}
+
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    border: 1px solid green;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}
