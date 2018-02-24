@@ -7,6 +7,8 @@
 /*    grid-template-rows: 5% 15% 5% 70% 5%;*/
     font-family: 'Grand Hotel', cursive;
     padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 100vh;
 }
 
 .header {
@@ -31,25 +33,34 @@
 .header-right {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+}
+#search-bar {
+    border-radius: 25px;
+    padding-left: 5px;
 }
 
 .section {
 /*    grid-row-start: 4;*/
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+/*    background-color: rgba(255, 255, 255, 0.7);*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 25px;
     border-radius: 25px;
+    padding-top: 25px;
 }
 .image-portada {
     width: 100%;
     height: 400px;
 /*    object-fit: contain;*/
 }
-
+.empty-div {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    font-size: 45px;
+}
 
 
 /*CSS TO FLIP */
@@ -61,7 +72,7 @@
     perspective: 1000px;
 /*    border: 1px solid red;*/
     height: 400px;
-    width: 25%;
+    width: 30%;
     margin: 1%
 }
 
@@ -116,6 +127,10 @@
 }
 .title-book {
     font-weight: bold;
+    font-size: 25px;
+}
+.title-book p {
+    text-align: center;
 }
 .description-book {
     
@@ -129,6 +144,7 @@
     align-items: center
 }
 .button-book{
-    width: 30%;
+/*    width: 30%;*/
+    background-color: #fec21a;
     
 }
