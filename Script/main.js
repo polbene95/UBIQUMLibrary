@@ -28,8 +28,26 @@ function printBooks (){
         var imgPortada = document.createElement("img");
         $(imgPortada).attr("src", portada).attr("alt", "portada del libro" + titulo).addClass("image-portada");
         
+        var pTitulo = document.createElement("p");
+        $(pTitulo).text(titulo);
+        var pDescripcion = document.createElement("p");
+        $(pDescripcion).addClass("description-book").text(descripcion);
+        var buttonDetalle = document.createElement("button");
+        $(buttonDetalle).addClass("btn button-book").attr("href", detalle).text("More Info");
+        
+        var titleDiv = document.createElement("div");
+        $(titleDiv).addClass("title-book")
+        var descriptionDiv = document.createElement("div");
+        $(descriptionDiv).addClass("more-info-book");
+        
+        titleDiv.append(pTitulo);
+        descriptionDiv.append(pDescripcion);
+        descriptionDiv.append(buttonDetalle);
+        
         front.append(imgPortada);
         
+        back.append(titleDiv);
+        back.append(descriptionDiv);
         
         flipper.append(front);
         flipper.append(back);
